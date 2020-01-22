@@ -1,0 +1,31 @@
+.navbar {
+    background-color: var(--background-color-cabecalho);
+}
+
+.navbar-brand {
+    color: var(--text-color-cabecalho-brand);
+}
+
+.card {
+    color: #FFFFFF;
+    padding:0px;
+    background-color: transparent !important;
+    border: unset;
+}
+
+.card-body {
+    padding: 0.2rem; 
+}
+
+.card-body p {
+    margin-bottom: 0px; font-size: 0.66em;
+}
+
+.btn {
+    padding: 0rem 1rem;
+}
+
+.material-icons {
+    font-size: 40px;
+    color:#FFFFFF
+}

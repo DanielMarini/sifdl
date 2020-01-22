@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    /*--background-color-cabecalho: #005a9b;*/
+    --background-color-cabecalho: #0A4E99;
+    --text-color-cabecalho-brand: #FFFFFF;
+    /*--background-color-menu-item-collapse: rgb(50, 150, 213);*/
+    --background-color-menu-item-collapse: #0e76c3;
+    --text-color-menu-item-collapse: #FFFFFF;
+    --font-color-menu-item-active: #000000;
+    --background-color-menu-item: #FFFFFF;
+    --font-color-menu-item: #000000;
+    --background-link-navbar-hover: #2890ff;
+    --font-color-link-navbar-hover: #FFFFFF;
+    --background-color-link-navbar-active: #ef9c00;
+    --font-color-link-navbar-active: #FFFFFF;
+}

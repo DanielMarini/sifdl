@@ -1,0 +1,36 @@
+.quadro-navbar {
+    background-color: var(--background-color-cabecalho);
+    padding: 5px;
+}
+
+.nav-link {
+    font-size: 0.81em;
+    background-color: var(--background-color-menu-item);
+    color: var(--font-color-menu-item);
+    border: 1px #000000 solid;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 0.3rem 0.15rem;
+}
+
+.nav-link:hover {
+    background-color: var(--background-link-navbar-hover);
+    color: var(--font-color-link-navbar-hover);
+}
+
+.sifdl-menu-collapse, .sifdl-menu-collapse:hover {
+    color: var(--text-color-menu-item-collapse);
+    background-color: var(--background-color-menu-item-collapse);
+    border: 1px #3b3b3b solid;
+    font-size: 0.91em;
+    width: 100%;
+    margin-left: 0px;
+    font-weight: 500;
+}
+
+.nav-link.active {
+    background-color: var(--background-color-link-navbar-active);
+    color: var(--font-color-link-navbar-active);
+}
+
+

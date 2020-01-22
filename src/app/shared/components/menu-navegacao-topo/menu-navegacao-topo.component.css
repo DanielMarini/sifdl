@@ -1,0 +1,56 @@
+.nav {
+    line-height: 1;
+}
+.nav-link {
+    padding: 0.4rem 0rem;
+    background-color: var(--background-color-menu-item);
+    color: var(--font-color-menu-item);
+}
+
+a.nav-link {
+    padding: 0.4rem 0rem;
+    color: var(--text-color-menu-item-collapse);
+    background-color: var(--background-color-menu-item-collapse);
+    border-radius: 0px;
+}
+
+.sifdl-menu-collapse {
+    font-size: 0.81em;
+    border-radius: 0px;
+}
+
+.nav-link.active {
+    color: var(--font-color-menu-item-active);
+    background-color: var(--background-color-menu-item-active);
+}
+
+.dropdown-menu {
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px var(--background-color-menu-item-collapse) solid;
+    top:-5px !important;
+    padding: 5px;
+    background-color: var(--background-color-menu-item-collapse);
+
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: var(--background-color-menu-item-collapse);
+}
+
+.dropdown-item {
+    border: 1px #000000 solid;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--background-link-navbar-hover);
+    color: var(--font-color-link-navbar-hover);
+}
+
+.dropdown-item.active {
+    background-color: var(--background-color-link-navbar-active);
+    color: var(--font-color-link-navbar-active);
+}

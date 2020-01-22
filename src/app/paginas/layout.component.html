@@ -1,0 +1,19 @@
+<div style="padding-left: 5px; padding-right: 5px;">
+    <div class="sticky-top">
+        <app-cabecalho></app-cabecalho>
+        <div class="d-lg-none">
+            <app-menu-navegacao-topo></app-menu-navegacao-topo>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-lg-block col-lg-2 col-xl-2" style="padding-left: 0rem; padding-top: 0rem; padding-right: 0rem;">
+                <app-menu-navegacao-lateral></app-menu-navegacao-lateral>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10" style="padding-left: 0rem;padding-right: 0rem;">
+                <app-breadcrumb></app-breadcrumb>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

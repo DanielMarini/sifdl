@@ -1,0 +1,42 @@
+<ul class="nav flex-column nav-pills nav-fill">
+    <div class="quadro-navbar">
+        <li class="nav-item">
+            <a class="nav-link sifdl-menu-collapse" href="#" data-toggle="collapse" data-target="#collapseSidebarGestaoCliente" aria-expanded="true" aria-controls="collapseSidebarGestaoCliente">Gestão de clientes
+       </a>
+        </li>
+        <div id="collapseSidebarGestaoCliente" class="collapse show" aria-labelledby="headingOne">
+            <li class="nav-item" *ngFor="let item of itensMenu | menuFiltro:'GESTAO_CLIENTE'">
+                <a class="nav-link" [routerLink]="item.path" routerLinkActive="active"
+                    data-toggle="tooltip" data-placement="right" 
+                    data-html="true" title="{{item.tooltip}}"                
+                >{{item.texto}}</a>
+            </li>
+        </div>
+    </div>
+    <div class="quadro-navbar">
+        <li class="nav-item">
+            <a class="nav-link sifdl-menu-collapse" href="#" data-toggle="collapse" data-target="#collapseSidebarParametrizacao" aria-expanded="true" aria-controls="collapseSidebarParametrizacao">Parametrização</a>
+        </li>
+        <div id="collapseSidebarParametrizacao" class="collapse show" aria-labelledby="headingOne">
+            <li class="nav-item" *ngFor="let item of itensMenu | menuFiltro:'PARAMETRIZACAO'">
+                <a class="nav-link" [routerLink]="item.path" routerLinkActive="active"
+                data-toggle="tooltip" data-placement="right" 
+                data-html="true" title="{{item.tooltip}}"                   
+                >{{item.texto}}</a>
+            </li>
+        </div>
+    </div>
+    <div class="quadro-navbar">
+        <li class="nav-item">
+            <a class="nav-link sifdl-menu-collapse" href="#" data-toggle="collapse" data-target="#collapseSidebarAdministracao" aria-expanded="true" aria-controls="collapseSidebarAdministracao">Administração</a>
+        </li>
+        <div id="collapseSidebarAdministracao" class="collapse show" aria-labelledby="headingOne">
+            <li class="nav-item" *ngFor="let item of itensMenu | menuFiltro:'ADMINISTRACAO'">
+                <a class="nav-link" [routerLink]="item.path" routerLinkActive="active"
+                data-toggle="tooltip" data-placement="right" 
+                data-html="true" title="{{item.tooltip}}"                   
+                >{{item.texto}}</a>
+            </li>
+        </div>
+    </div>
+</ul>
