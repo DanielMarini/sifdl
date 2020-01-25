@@ -7,8 +7,6 @@
         <div id="collapseSidebarGestaoCliente" class="collapse show" aria-labelledby="headingOne">
             <li class="nav-item" *ngFor="let item of itensMenu | menuFiltro:'GESTAO_CLIENTE'">
                 <a class="nav-link" [routerLink]="item.path" routerLinkActive="active"
-                    data-toggle="tooltip" data-placement="right" 
-                    data-html="true" title="{{item.tooltip}}"                
                 >{{item.texto}}</a>
             </li>
         </div>
@@ -20,8 +18,6 @@
         <div id="collapseSidebarParametrizacao" class="collapse show" aria-labelledby="headingOne">
             <li class="nav-item" *ngFor="let item of itensMenu | menuFiltro:'PARAMETRIZACAO'">
                 <a class="nav-link" [routerLink]="item.path" routerLinkActive="active"
-                data-toggle="tooltip" data-placement="right" 
-                data-html="true" title="{{item.tooltip}}"                   
                 >{{item.texto}}</a>
             </li>
         </div>
@@ -33,8 +29,6 @@
         <div id="collapseSidebarAdministracao" class="collapse show" aria-labelledby="headingOne">
             <li class="nav-item" *ngFor="let item of itensMenu | menuFiltro:'ADMINISTRACAO'">
                 <a class="nav-link" [routerLink]="item.path" routerLinkActive="active"
-                data-toggle="tooltip" data-placement="right" 
-                data-html="true" title="{{item.tooltip}}"                   
                 >{{item.texto}}</a>
             </li>
         </div>
