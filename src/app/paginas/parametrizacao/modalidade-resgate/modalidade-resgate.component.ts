@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalidadeResgateComponent implements OnInit {
 
-  constructor() { }
 
+  constructor() { }
+ 
   ngOnInit() {
   }
 

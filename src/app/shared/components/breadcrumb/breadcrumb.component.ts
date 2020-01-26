@@ -43,15 +43,19 @@ export class BreadcrumbComponent implements OnInit {
      // If the route is dynamic route such as ':id', remove it
      const lastRoutePart = path.split('/').pop();
      const isDynamicRoute = lastRoutePart.startsWith(':');
+     //const isDynamicRouteAndStatic = lastRoutePart.startsWith(':') && lastRoutePart.indexOf('/');
 
-     if(isDynamicRoute && !!route.snapshot) {
-       const paramName = lastRoutePart.split(':')[1];
-       
-       path = path.replace(lastRoutePart, route.snapshot.params[paramName]);
-       label = route.snapshot.params[paramName];
-       link = route.snapshot.params[paramName];
-     }
+      //console.log(lastRoutePart)
+
+     //if(isDynamicRoute && !!route.snapshot) {
+       //const paramName = lastRoutePart.split(':')[1];
+       //path = path.replace(lastRoutePart, route.snapshot.params[paramName]);
+       //label = route.snapshot.params[paramName];
+       //link = route.snapshot.params[paramName];
+     //}
  
+     //console.log(path)
+
      //In the routeConfig the complete path is not available,
      //so we rebuild it each time
      const nextUrl = path ? `${url}/${path}` : url;
@@ -61,6 +65,7 @@ export class BreadcrumbComponent implements OnInit {
          link: link,
          url: nextUrl,
      };
+
      // Only adding route with non-empty label
      const newBreadcrumbs = breadcrumb.label ? [ ...breadcrumbs, breadcrumb ] : [ ...breadcrumbs];
      if (route.firstChild) {

@@ -1,0 +1,9 @@
+.btn-icone-custom .material-icons {
+    padding-top: 5px;
+    padding-right: 7px;
+    font-size: 16px;
+}
+
+.btn-icone-custom span {
+    font-size: 16px;
+}

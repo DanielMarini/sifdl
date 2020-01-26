@@ -13,11 +13,12 @@ export class MenuNavegacaoLateralComponent implements OnInit {
 
   itensMenu: ItemMenu[] = null;
 
-  constructor(private _constantes: ConstantesService) {
-    this.itensMenu = this._constantes.itensMenu;
+  constructor() {
+    
   }
 
   ngOnInit() {
+    this.itensMenu = ConstantesService.MENU_ITENS;
   }
 
 }

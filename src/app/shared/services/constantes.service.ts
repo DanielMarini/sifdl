@@ -6,7 +6,7 @@ import { ItemMenu } from '../interfaces/item-menu';
 })
 export class ConstantesService {
 
-  readonly itensMenu: ItemMenu[] = 
+  public static readonly MENU_ITENS: ItemMenu[] = 
     [ { menu:'GESTAO_CLIENTE', texto:'Cliente', path:'/p/gestao-cliente/cliente'},
       { menu:'GESTAO_CLIENTE', texto:'Resgatar', path:'/p/gestao-cliente/resgatar'},
       { menu:'GESTAO_CLIENTE', texto:'Transferir', path:'/p/gestao-cliente/transferir'},
@@ -21,6 +21,10 @@ export class ConstantesService {
       { menu:'ADMINISTRACAO', texto:'Consultar Log de Auditoria', path:'/p/administracao/auditoria' },
       { menu:'ADMINISTRACAO', texto:'Manter perfis do sistema', path:'/p/administracao/perfis' },
     ];
+
+  public static readonly INCLUIR: string = 'INCLUIR';
+  public static readonly DETALHAR: string = 'DETALHAR';
+  public static readonly EDITAR: string = 'EDITAR';
 
   constructor() { }
 }

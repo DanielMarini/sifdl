@@ -1,0 +1,94 @@
+<div *ngIf="route.children.length === 0">
+    <div class="row mt-sm-1">
+        <div class="col-sm-10 col-lg-8 offset-sm-1 offset-lg-2">
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-sm-4">
+                        <label for="inputCanalResgate" class="font-weight-bold">Canal de Resgate</label>
+                        <input type="text" class="form-control " id="inputCanalResgate">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="inputCanalResgate" class="font-weight-bold">Situação</label>
+                        <select class="custom-select mb-2">
+                            <option value="T" selected>Todas</option>
+                            <option value="A">Ativo</option>
+                            <option value="I">Inativo</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 text-center text-md-left" style="padding-top: 1.98rem;">
+                        <button type="submit" class="btn btn-primary mb-2 btn-icone-custom">
+                            <i class="material-icons float-left">search</i>
+                            <span class="float-right">Pesquisar</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-sm-3">
+        <div class="col-sm-12 col-lg-10 offset-lg-1">
+            <div class="table-responsive-sm ">
+                <table class="table table-sm table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Canal</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Descrição</th>
+                            <th scope="col" class="d-none d-md-table-cell">Usuário de Serviço</th>
+                            <th scope="col" class="d-none d-xl-table-cell">Cliente API</th>
+                            <th scope="col">Situação</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let canal of listaCanalResgate | async; let i = index">
+                            <td>{{ canal.nome }}</td>
+                            <td class="d-none d-sm-table-cell">{{ canal.descricao }}</td>
+                            <td class="d-none d-md-table-cell">{{ canal.usuarioServico }}</td>
+                            <td class="d-none d-xl-table-cell">{{ canal.clienteApi }}</td>
+                            <td>{{ canal.situacao | situacaoRegistro:'CANAL_RESGATE' }}</td>
+                            <td>
+                                <button type="button" class="btn btn-link btn-editar mr-sm-1" title="Detalhar"
+                                    [routerLink]="['/p','parametrizacao','canal-resgate',canal.nome]">
+                                    <i class="material-icons">pageview</i></button>
+                                <button type="button" class="btn btn-link btn-editar" title="Editar"
+                                    [routerLink]="['/p','parametrizacao','canal-resgate',canal.nome,'editar']">
+                                    <i class="material-icons">edit</i></button>
+                            </td>
+                        </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="isPaginar">
+        <div class="col-sm-10 col-lg-8 offset-sm-1 offset-lg-2">
+            <nav aria-label="..." class="">
+                <ul class="pagination pagination-sm">
+                    <li class="page-item disabled">
+                        <span class="page-link">Anterior</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">
+                            2
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Próxima</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10 col-lg-8 offset-sm-1 offset-lg-2 text-center">
+            <button type="button" class="btn btn-primary btn-icone-custom" title="Incluir"
+                [routerLink]="['/p','parametrizacao','canal-resgate','incluir']" routerLinkActive="active">
+                <i class="material-icons float-left">add</i>
+                <span class="float-right">Incluir</span></button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

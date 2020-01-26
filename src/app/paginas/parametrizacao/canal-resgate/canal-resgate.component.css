@@ -1,0 +1,41 @@
+.material-icons {
+    padding: 0px;
+    margin: 0px; 
+    font-size: 20px;
+}
+
+.btn-editar {
+    padding-top: 3px;
+    padding-bottom: 0px;
+    border: 1px #000000  solid;
+/*    background-color: #ffc107 ;*/
+    color: #000000;
+}
+
+.btn-editar:hover {
+    border: 1px #000000  solid;
+/*    background-color: #ffc107 ;*/
+    color: #FFFFFF;
+    background-color: #2890ff;
+}
+
+
+
+.row {
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+.pagination {
+    justify-content: center;
+ }
+
+ .btn-icone-custom .material-icons {
+    padding-top: 5px;
+    padding-right: 7px;
+    font-size: 16px;
+}
+
+.btn-icone-custom span {
+    font-size: 16px;
+}

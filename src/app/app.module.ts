@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './shared/components/cabecalho/cabecalho.component';
 import { LoginComponent } from './paginas/login/login.component';
@@ -15,6 +16,9 @@ import { MenuNavegacaoTopoComponent } from './shared/components/menu-navegacao-t
 import { ConstantesService } from './shared/services/constantes.service';
 import { MenuFiltroPipe } from './shared/pipes/menu-filtro.pipe';
 import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
+import { CanalResgateComponent } from './paginas/parametrizacao/canal-resgate/canal-resgate.component';
+import { CanalResgateFormularioComponent } from './paginas/parametrizacao/canal-resgate/canal-resgate-formulario.component';
+import { SituacaoRegistroPipe } from './shared/pipes/situacao-registro.pipe';
 
 @NgModule({
   declarations: [
@@ -28,13 +32,19 @@ import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.c
     MenuNavegacaoLateralComponent,
     MenuNavegacaoTopoComponent,
     MenuFiltroPipe,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    CanalResgateComponent,
+    CanalResgateFormularioComponent,
+    SituacaoRegistroPipe,
+    SituacaoRegistroPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [ AutenticacaoGuard, ConstantesService ],
+  providers: [AutenticacaoGuard, ConstantesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

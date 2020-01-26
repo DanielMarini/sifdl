@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AutenticacaoService {
 
-  private usuarioLogado: boolean = false;
+  private usuarioLogado: boolean = true;
 
   constructor() { }
 
